@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #ex div{
+            float:left;
+            width:100px;
+            height:50px;
+            margin:5px 10px;
+            padding:5px;
+            color:white;
+            background-color:#006aff;
+            border-radius:5px;
+            text-align:center;
+            font-weight:bold;
+        }
+        #ex:hover div{
+            height:400px;
+        }
+        /*처음에는 천천 시작, 점점 빨라지다가 마지막에는 천천히 끝냄 : 기본값*/
+        #ex .ease {
+            -moz-transition: 3s ease; /*아래 3줄은 브라우저 호환성 때문에 작성함.*/
+            -o-transition: 3s ease;
+            -webkit-transition: 3s ease;
+            transition: 3s ease;
+        }
+        /*시작부터 끝까지 똑같은 속도로 진행*/
+        #ex .linear{
+            -webkit-transition:3s linear;
+            -moz-transition:3s linear;
+            -o-transition:3s linear;
+            transition:3s linear;
+        }
+        /*시작을 느리게*/
+        #ex .ease-in{
+            -webkit-transition:3s ease-in;
+            -moz-transition:3s ease-in;
+            -o-transition:3s ease-in;
+            transition:3s ease-in;
+        }
+        /*느리게 끝냄*/
+        #ex .ease-out{
+            -webkit-transition:3s ease-out;
+            -moz-transition:3s ease-out;
+            -o-transition:3s ease-out;
+            transition:3s ease-out;
+        }
+        /*느리게 시작하고 느리게 끝냄*/
+        #ex .ease-in-out{
+            -webkit-transition:3s ease-in-out;
+            -moz-transition:3s ease-in-out;
+            -o-transition:3s ease-in-out;
+            transition:3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+<div id="ex">
+    <div class="ease"> ease </div>
+    <div class="linear"> linear </div>
+    <div class="ease-in"> ease-in </div>
+    <div class="ease-out"> ease-out </div>
+    <div class="ease-in-out"> ease-in-out </div>
+</div>
+</body>
+</html>

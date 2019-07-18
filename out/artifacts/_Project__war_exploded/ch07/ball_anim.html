@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #ball {
+            position: absolute; /*절대좌표*/
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 10px; /*둥근 모서리 처리해서 공처럼 보임 */
+            animation-name: bounce; /*에니메이션 효과 이름*/
+            animation-iteration-count: infinite; /*애니메이션 반복 횟수*/
+            animation-duration: 5s; /*에니메이션 실행시간*/
+        }
+        @keyframes bounce {
+            from, to {
+                bottom: 0px; /*처음은 바닥 0 에서 시작함*/
+                animation-timing-function: ease-out;
+            }
+            50% {
+                bottom: 200px; /*200px 까지 감   올라가는데 50 , 내려오는 50 임*/
+                animation-timing-function: ease-in;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div id="ball"></div>
+</body>
+</html>

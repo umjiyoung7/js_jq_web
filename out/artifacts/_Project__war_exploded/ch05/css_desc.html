@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* h1 태그의 자손 em 태그*/
+        h1 em {
+            color: red;
+        }
+        /*body 태그의 자손 h1 태그*/
+        body h1 {
+            color: blue;
+        }
+
+         /*body 태그의 아들 h1 태그*/
+          div >  h1 {
+             color: orange;
+         }
+    </style>
+</head>
+<body>
+<h1> h1헤딩 <em>em태그</em></h1>
+<em>em강조할 내용</em>
+<div>div태그<h1>h1헤딩태그</h1></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ol {
+            list-style :none; /*불릿을 표시 하지 않음*/
+            text-align:center;
+            border-top:1px solid red;
+            border-bottom: 1px solid red;
+            padding: 10px 0;
+        }
+        ol li {
+            display: inline; /*화면배치요소 : block , inline  변경*/
+            text-transform: uppercase;
+            padding: 0 10px ; letter-spacing: 10px;
+            letter-spacing: 10px; /*글짜 간격*/
+        }
+        ol li a {
+            text-decoration: none; color: black;
+        }
+        ol li a:hover { text-decoration: underline}
+        div {
+            display: inline; float: right; border: 1px solid red}
+
+    </style>
+</head>
+<body>
+<ol>
+    <li><a href="#"> HOME </a> </li>
+    <li><a href="#"> Blog </a> </li>
+    <li><a href="#"> About </a> </li>
+    <li><a href="#"> Contact </a> </li>
+</ol>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+</body>
+</html>

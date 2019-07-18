@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size: medium;
+        }
+        #t1{
+            font_size : 1.0em;
+            /*
+            기본사이즈(Default) 12pt 16px
+            폰트 크기 %도 가능 기본값 12pt의 몇 %...
+                     */
+            font-weight: bold;
+        }
+        #t2{
+            font: italic bold 30px 궁서체;
+            /*  위는 한번에 표현하고 아래는 하나씩 표현한 것
+              font-style : italic;
+              font-size: 30px;
+              font-weight: bold;
+              font-family: 궁서체;*/
+        }
+        #t3{
+            font-size: 2.0em; /*em 기본 사이즈(12pt 16px)의 2배*/
+            font-style: italic;
+        }
+    </style>
+
+</head>
+<body>
+    <p id="t1">t1문단1</p>
+    <p id="t2">t2문단2</p>
+    <p id="t3">t3문단3</p>
+</body>
+</html>

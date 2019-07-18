@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*자바스크립트 영역
+        * document : 자바스크립트의 최상의 객체
+        * */
+        function check() { // 자바스크립트 함수(리턴타입 없음)
+            var price = document.input.price.value; // 태그에 입력된 값
+            var amount = document.input.amount.value;
+
+            if(price == ""){
+                alert("가격을 입력하세요");
+                document.input.price.focus(); // 입력 커서 이동
+                return; // 함수 종료
+
+            }
+            if(amout == ""){
+                alert("수량을 입력하세요");
+                document.input.amout.focus();
+                return;
+            }
+            document.input.submit(); // 폼 데이터를 전송함 form 데이터를 submit 함.
+
+        }
+    </script>
+
+</head>
+<body>
+<!--button type="button" : 전송기능이 없음 , 데이터를 전송을 하려면 자바스크립트 코드가 필요함-->
+<form name="input" action="buttonForm_rst.jsp" method="post">
+    가격 : <input type="number" name="price" required/><br> <!--html5 신기능 :  type="number"  required-->
+
+    수량 : <input type="text" name="amount"/><br>
+    <input type="submit" value="계산" >
+    <button type="button" onclick="check()">no submit 계산</button>
+    <button >submit 계산</button> <!--그냥 button만 사용하면 submit 됨-->
+
+</form>
+
+</body>
+</html>

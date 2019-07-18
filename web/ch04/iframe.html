@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>이 페이지는 iframe 방식으로 표시됩니다.</h1>
+<!--iframe src="웹페이지 경로" width="가로길이" height="세로길이" -->
+<iframe src="inner.html" width="300px" height="500px" name="iframe1"></iframe>
+<!--안됨-->
+<!--하이퍼링크를 클릭하면 iframe으로 표시됨-->
+<a href="http://m.nate.com" target="iframe1" >네이트</a>
+<a href="http://m.google.com" target="iframe1" >구글</a>
+<!--네이버는 차단하고 있음....현재는 잘 사용하지 않음-->
+<a href="https://m.naver.com/" target="iframe1" >네이버</a>
+<!--안됨-->
+<a href="https://m.naver.com/" >네이버</a>
+
+</body>
+</html>

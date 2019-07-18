@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        var arrName = ["갑","을","병","정"]; //배열
+        $(function(){
+            // 배열.map() => 배열의 key,value 리턴
+            var arr=arrName.map(function(value){
+                console.log("value: " + value);
+                return value;
+            });
+            console.log(arr);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

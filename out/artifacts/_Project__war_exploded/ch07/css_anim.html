@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            position: absolute; /*절대좌표*/
+            left: 100px;
+            top: 100px;
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            background: yellow;
+            /*5초 동안 길이 변형*/
+            transition: width 5s, height 5s, transform 5s;
+        }
+        /*태그 : 세부속성*/
+        div:hover { /*마우스가 올라가면 사이즈 변경*/
+            width: 200px;
+            height: 500px;
+            transform:rotate(180deg); /*회전효과(180도)*/
+            /*크기 변환 scale(x축 길이 비율, y축 길이비율)
+            transform : scale(1.5, 1.5);
+            비틀기 skew(x 축 각도, y 축 각도)
+            transform : skew(30deg, 20deg);*/
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

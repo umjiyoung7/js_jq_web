@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative; /*상대좌표*/
+            animation:2s myanim; /*2초 동안 실행*/
+            animation-iteration-count: 5; /*반복횟수*/
+            /*animation-iteration-count: infinite; 무한반복*/
+        }
+        @keyframes myanim {
+            0% {left: 0px; top: 0px;}
+            25% {left: 100px; top: 50px;}
+            50% {left: 200px; top: 100px;}
+            75% {left: 100px; top: 50px;}
+            100% {left: 0px; top: 0px;}
+
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
