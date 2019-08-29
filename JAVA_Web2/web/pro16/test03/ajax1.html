@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax1</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        function fn_process(){
+            $.ajax({
+                type:"get",
+                dataType:"text",
+                async:false,
+                url:"http://localhost/ajaxTest1",
+                data:{param:"hello,jquery"},
+                success:function (data, textStatus) {
+                    $("#message").append(data);
+                },
+                error:function (dta,textStatus) {
+                    alert("에러 발생");
+                },
+                complete:function (data, textStatus) {
+                    alert("작업 완료");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="전송하기" onClick="fn_process()"/><br><br>
+<div id="message"></div>
+</body>
+</html>

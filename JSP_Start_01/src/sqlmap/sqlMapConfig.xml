@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml 지시어 -->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+    <!-- 알리아스 설정 마이바티스, 디비 접속 정보, sql문 연결
+     모듈을 쪼개 쓰기 위해서-->
+    <typeAliases>
+        <!-- typeAlias type="전체경로" alias="별칭" -->
+    </typeAliases>    <!-- db 연결 참조코드 -->
+    <environments default="">
+        <environment id="">
+            <transactionManager type="JDBC"/>
+            <dataSource type="JNDI">
+                <property name="data_source" value="java:comp/env/jdbc/OracleDB"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 실제 sql query -->
+    <mappers>
+        <mapper resource="memo/mapper/memo.xml"/>
+        <mapper resource="survey/mapper/survey.xml" />
+<!--        <mapper resource="guestbook/mapper/guestbook.xml" />-->
+        <mapper resource="page/emp.xml" />
+    </mappers>
+</configuration>

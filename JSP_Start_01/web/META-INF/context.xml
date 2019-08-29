@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/">
+    <!--DBCP(DataBase Connction Pool) 설정-->
+    <Resource name="jdbc/OracleDB"
+              auth="Container"
+              driverClassName="oracle.jdbc.driver.OracleDriver"
+              maxTotal="50"
+              maxIdle="10"
+              maxWaitMillis="-1"
+              type="javax.sql.DataSource"
+              url="jdbc:oracle:thin:@localhost:1521:XE"
+              username="spring"
+              password="1234"/>
+
+<!--    DBCP 읽어보기 제일 많이 쓰는 커넥션 풀-->
+<!--    HikariCP-->
+
+</Context>

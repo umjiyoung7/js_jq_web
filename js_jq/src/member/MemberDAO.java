@@ -13,6 +13,7 @@ public class MemberDAO {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
+//        try (conn; pstmt; rs)
         try {
             conn = DB.getConn(); //DB 커넥션 리턴
             String sql = "select name from member" + " where userid=? and passwd=?";
@@ -25,7 +26,8 @@ public class MemberDAO {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+        finally { //생성된것 반대방향으로 닫아줘야 함
             try {
                 if (rs != null) rs.close();
             } catch (SQLException e) {

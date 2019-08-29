@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax3.html</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        function fn_process() {
+            var _id=$("#t_id").val();
+            if (_id == "") {
+                alert("ID를 입력하시오");
+                return;
+            }
+            $.ajax({
+                type: "post",
+                async:false,
+                url:"http://localhost/mem",
+                dataType:"text",
+                data:{id:_id},
+                success:function (data, textStatus) {
+                    if (data == 'usable') {
+                        $("#message").text("사용할 수 있는 ID");
+                        $("#btn_duplicate").prop("disabled", true);
+                    }else{
+                        $("#message").text("사용할 수 없는 ID");
+                    }
+                },
+                error:function (data, textStatus) {
+                    alert("에러 발생");
+                },
+                complete:function (data, textStatus) {
+                    alert("작업 완료")
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="t_id"/>
+<input type="button" id="btn_duplicate" value="ID 중복 체크" onclick="fn_process()"/><br><br>
+<div id="message"></div>
+
+</body>
+</html>
