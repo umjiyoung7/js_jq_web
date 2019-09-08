@@ -69,9 +69,9 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
         <property name="memberService" ref="memberService"/>
     </bean>
 
-    <bean id="memberService" class="com22.spring.member.service.MemberServiceImpl">
-        <property name="memberDAO" ref="memberDAO"/>
-    </bean>
+<!--    <bean id="memberService" class="com22.spring.member.service.MemberServiceImpl">-->
+<!--        <property name="memberDAO" ref="memberDAO"/>-->
+<!--    </bean>-->
 
     <bean  id="methodResolver"
            class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver" >
