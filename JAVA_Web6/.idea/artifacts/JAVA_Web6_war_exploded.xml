@@ -2,12 +2,17 @@
   <artifact type="exploded-war" name="JAVA_Web6:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/JAVA_Web6_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="JAVA_Web6/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="JAVA_Web6" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="lib2" />
+          <element id="library" level="project" name="lib4" />
+        </element>
       </element>
+      <element id="javaee-facet-resources" facet="JAVA_Web6/web/Web" />
     </root>
   </artifact>
 </component>
