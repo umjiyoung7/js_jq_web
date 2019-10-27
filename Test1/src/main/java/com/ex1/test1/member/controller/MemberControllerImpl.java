@@ -25,7 +25,7 @@ import com.ex1.test1.member.vo.MemberVO;
 
 @Controller("memberController")
 @EnableAspectJAutoProxy
-public class MemberControllerImpl   implements MemberController {
+public class MemberControllerImpl implements MemberController {
 	//	private static final Logger logger = LoggerFactory.getLogger(MemberControllerImpl.class);
 	@Autowired
 	private MemberService memberService;
